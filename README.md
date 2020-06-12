@@ -2,15 +2,17 @@
 
 A pipeable write stream which uploads to Amazon S3 using the multipart file upload API.
 
-**NOTE: This module is deprecated after the 2.1.0 release of the AWS SDK on Dec 9, 2014, which added [`S3.upload()`](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property). I highly recommend switching away from this module and using the official method supported by AWS.**
+**Former note from the original author: This module is deprecated after the 2.1.0 release of the AWS SDK on Dec 9, 2014, which added [`S3.upload()`](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property). I highly recommend switching away from this module and using the official method supported by AWS.**
+
+**NOTE**: I still think this simplifies things so I'm activating it
 
 [![NPM](https://nodei.co/npm/s3-upload-stream.png?downloads=true)](https://www.npmjs.org/package/s3-upload-stream)
 
 ### Changelog
 
-#### 1.0.6 (2014-10-20)
+#### 1.0.7 (2020-05-12)
 
-Removing global state, and adding pause and resume functionality.
+Allow cancelation of the upload
 
 [Historical Changelogs](CHANGELOG.md)
 
@@ -198,6 +200,11 @@ Calling `resume()` will immediately:
 * echo a `resume` event back to any listeners.
 
 It is safe to call `resume()` at any time after `pause()`. If the stream is between `pausing` and `paused`, then `resume()` will resume data flow and the `paused` event will not be fired.
+
+### stream.abort(message)
+
+Cancels the current upload and generates an error event with the message informed.
+
 
 ### stream.maxPartSize(sizeInBytes)
 
