@@ -1,6 +1,10 @@
 Changelog [![Changelog Status](https://changelogs.md/img/changelog-check-green.svg)](https://changelogs.md/github/nathanpeck/s3-upload-stream/)
 =========
 
+#### 1.0.7 (2020-06-12)
+
+Allow cancelation of the uploads
+
 #### 1.0.6 (2014-10-20)
 
 Removing global state, and adding pause and resume functionality.
