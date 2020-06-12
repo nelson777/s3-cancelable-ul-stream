@@ -2,7 +2,7 @@
 
 A pipeable write stream which uploads to Amazon S3 using the multipart file upload API.
 
-**Former note from the original author: This module is deprecated after the 2.1.0 release of the AWS SDK on Dec 9, 2014, which added [`S3.upload()`](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property). I highly recommend switching away from this module and using the official method supported by AWS.**
+**Former note from the original author:** This module is deprecated after the 2.1.0 release of the AWS SDK on Dec 9, 2014, which added [`S3.upload()`](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#upload-property). I highly recommend switching away from this module and using the official method supported by AWS.
 
 **NOTE**: I still think this simplifies things so I'm activating it
 
